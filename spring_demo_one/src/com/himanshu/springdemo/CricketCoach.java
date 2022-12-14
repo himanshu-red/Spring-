@@ -43,6 +43,14 @@ public class CricketCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune(); 
 	}
+	
+	public void initMethod() {
+		System.out.println("hello from init method");
+	}
+	
+	public void destroyMethod() {
+		System.out.println("bye from init method");
+	}
 
 	
 }

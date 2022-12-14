@@ -1,19 +1,16 @@
 package com.himanshu.springdemo;
 
-import java.sql.Connection;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BeanLifeCycleDemoApp {
 
 	public static void main(String[] args) {
 		// load the configuration file
-		ClassPathXmlApplicationContext context = new 		ClassPathXmlApplicationContext("beanLifecycle-applicationContext.xml"); 
+		ClassPathXmlApplicationContext context = new 				ClassPathXmlApplicationContext("beenLifeCycleApplicationContext2.xml"); 
 		
 		// retrieve bean from  the configuration file
-		Coach theCoach = context.getBean("myCoach", Coach.class);
+		Coach theCoach = context.getBean("theCoach", Coach.class);
 		System.out.println(theCoach.getDailyWorkout());
 		context.close();
 	}
-
 }
