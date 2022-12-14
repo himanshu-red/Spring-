@@ -8,9 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<!-- Load the properties file -->
-	<context:property-placeholder location="classpath:sport.properties"/>
-
+	
 	<!-- Define your beans here -->	
 	
 	<!-- Define the  dependency -->
@@ -19,24 +17,14 @@
 	</bean>
 
     <bean 	id="myCoach"
-    		class="com.himanshu.springdemo.BaseballCoach">
+    		class="com.himanshu.springdemo.BaseballCoach"
+    		scope="prototype">
     		
     	<!--  Set up constructor injection  -->
 			<constructor-arg ref="myFortuneService"/>    
 	</bean>
     
-     <bean 	id="myCricketCoach"
-    		class="com.himanshu.springdemo.CricketCoach"> 
-			
-			<!--  set up setter injection -->
-			<property name="fortuneService" ref="myFortuneService"/>
-			
-			<!--  Inject Literal Value for email-->
-			<property name="emailAddress"  	value="${foo.email}" />
-			
-			<!--  inject literal value for team -->
-			<property name="team" 			value="${foo.team}"/>
-	</bean>
+
     
 </beans>
 

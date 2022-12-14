@@ -17,7 +17,6 @@ public class CricketCoach implements Coach {
 	}
 
 	public String getEmailAddress() {
-		System.out.println("Inside get email address method");
 		return emailAddress;
 	}
 
@@ -27,7 +26,6 @@ public class CricketCoach implements Coach {
 	}
 
 	public String getTeam() {
-		System.out.println("Inside get team address method");
 		return team;
 	}
 
@@ -40,11 +38,11 @@ public class CricketCoach implements Coach {
 	public String getDailyWorkout() {
 		return "practice fast bowling for 1 hour a day"; 
 	}
-	
+
 	@Override
 	public String getDailyFortune() {
-		fortuneService.setFortune("You'll hit 6 sixes today"); 
-		return fortuneService.getFortune();
+		return fortuneService.getFortune(); 
 	}
+
 	
 }
