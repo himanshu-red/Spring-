@@ -19,7 +19,8 @@
     <bean 	id="myCoach"
     		class="com.himanshu.springdemo.TrackCoach"
     		scope="prototype"
-    		>
+    		init-method="doMyStartupStuff"
+    		destroy-method="doMyCleanUpStuff">
     		
     	<!--  Set up constructor injection  -->
 			<constructor-arg ref="myFortuneService"/>    

@@ -22,7 +22,7 @@ public class BeanScopeDemoApp {
 		System.out.println("memory location of theCoach : " + theCoach);
 		System.out.println("memory loction of the alphaCoach : " + alphaCoach);
 		
-		context.close(); 
+		context.close();
 	}
 
 }
